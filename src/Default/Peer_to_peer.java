@@ -26,7 +26,7 @@ class Peer_to_peer {
     PrivateThread pt;
     Peer_to_peer(String s,String friend) {
         try {
-           // System.out.println(InetAddress.getByName(s).toString());
+            System.out.println(InetAddress.getByName(s).toString()+"  p2p");
             socket=new Socket(InetAddress.getByName(s),5645);
             //To change body of generated methods, choose Tools | Templates.
              this.pt=new PrivateThread(socket,friend,false);

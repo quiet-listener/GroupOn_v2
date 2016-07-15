@@ -223,8 +223,8 @@
             <EventHandler event="valueChanged" listener="javax.swing.event.ListSelectionListener" parameters="javax.swing.event.ListSelectionEvent" handler="jList1ValueChanged"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JList&lt;&gt;(lm)"/>
-            <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="lm=new DefaultListModel();&#xa;ArrayList&lt;String&gt; ar=cbean.refreshList();&#xa;        Iterator it=ar.iterator();&#xa;        while(it.hasNext())&#xa;        lm.addElement((String) it.next());"/>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JList(lm)"/>
+            <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="lm=new DefaultListModel();&#xa;ArrayList&lt;String&gt; ar=cbean.refreshList();&#xa;        Iterator it=ar.iterator();&#xa;        while(it.hasNext())&#xa;        lm.addElement((String)it.next());"/>
             <AuxValue name="JavaCodeGenerator_DeclarationPre" type="java.lang.String" value="private DefaultListModel&lt;String&gt; lm;"/>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>

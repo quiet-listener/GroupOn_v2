@@ -2,6 +2,7 @@ package Default;
 
 
 import GUI.Index;
+import java.net.InetAddress;
 import javax.swing.JFrame;
 
 /*
@@ -16,6 +17,7 @@ import javax.swing.JFrame;
  */
 public class Main {
     public static String user;
+    public static InetAddress ip;
     /**
      * @param args the command line arguments
      */

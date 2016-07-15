@@ -53,8 +53,8 @@ public class ChatRoom extends javax.swing.JFrame {
         ArrayList<String> ar=cbean.refreshList();
         Iterator it=ar.iterator();
         while(it.hasNext())
-        lm.addElement((String) it.next());
-        jList1 = new javax.swing.JList<>(lm);
+        lm.addElement((String)it.next());
+        jList1 = new javax.swing.JList(lm);
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();

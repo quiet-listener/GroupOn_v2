@@ -48,7 +48,7 @@ import javax.swing.JOptionPane;
              adp.addElement(sq23[0]);           
              for(int i=1;i<sq23.length;i++)
              adp.addElement( new String(ch)+sq23[i]);
-             jlist2=new JList<>(adp);
+             jlist2=new JList(adp);
              dio.close();
              s.close();
             

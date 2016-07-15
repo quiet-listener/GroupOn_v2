@@ -68,7 +68,7 @@ public class Client {
     }
     private Client(String usr,String pwd){
         try{
-            socket=new Socket("localhost",5647);
+            socket=new Socket("172.31.76.214",5647);
             dio=new DataInputStream(socket.getInputStream());
             doi=new DataOutputStream(socket.getOutputStream());
             doi.writeUTF("_Login_");
@@ -94,6 +94,7 @@ public class Client {
             return false;
         }
         flag=true;
+        Main.ip=socket.getLocalAddress();
         mpst=new MyPrivateServerThread(usr);
         mpst.start();
         return true;
@@ -105,7 +106,11 @@ public class Client {
             doi.writeUTF(s);
         int n=Integer.parseInt(dio.readUTF());
         for(int i=0;i<n;i++){
-            ar.add(dio.readUTF());
+            String srr=dio.readUTF();
+            if(srr.equals(Main.user)){
+                continue;
+            }
+            ar.add(srr);
           }
         } catch (IOException ex) {
             Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
@@ -115,7 +120,7 @@ public class Client {
     public static String register(String name,String usrname,String pwd,String email,String num){
         String s=null;
         try {
-            socket=new Socket("localhost",5647);
+            socket=new Socket("172.31.76.214",5647);
             socket.setReuseAddress(true);
             dio=new DataInputStream(socket.getInputStream());
             doi=new DataOutputStream(socket.getOutputStream());
